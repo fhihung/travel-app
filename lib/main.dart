@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:travelapp/screens/detail_page.dart';
 
+import 'screens/home_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -82,15 +84,6 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Home Screen'),
     );
   }
 }

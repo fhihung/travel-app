@@ -4,16 +4,19 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'package:travelapp/constant.dart';
+import 'package:travelapp/screens/detail_travel.dart';
 
 class ImageBox extends StatelessWidget {
   double heightImg;
   String urlImg;
   EdgeInsets marginImg;
   String titleText;
+  String subtitleText;
   Color colorText;
   double sizeIcon;
   double paddingIcon;
   String priceText;
+  VoidCallback? onTap;
 
   ImageBox({
     Key? key,
@@ -21,10 +24,12 @@ class ImageBox extends StatelessWidget {
     required this.urlImg,
     required this.marginImg,
     required this.titleText,
+    required this.subtitleText,
     required this.colorText,
     required this.sizeIcon,
     required this.paddingIcon,
     required this.priceText,
+    this.onTap,
   }) : super(key: key);
 
   @override
@@ -58,7 +63,7 @@ class ImageBox extends StatelessWidget {
               padding: EdgeInsets.all(paddingIcon),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
-                color: Color.fromARGB(194, 142, 142, 142),
+                color: Color.fromARGB(194, 255, 255, 255),
               ),
               child: RichText(
                 text: TextSpan(
@@ -107,24 +112,27 @@ class ImageBox extends StatelessWidget {
                         width: 20,
                         color: primaryColor,
                       ),
-                      Text('Ninh Bình',
+                      Text(subtitleText,
                           style: TextStyle(
                             color: colorText,
                             fontSize: 16,
                           )),
                     ],
                   ),
-                  trailing: Container(
-                    width: sizeIcon,
-                    height: sizeIcon,
-                    padding: EdgeInsets.all(paddingIcon),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        color: Color.fromARGB(255, 255, 255, 255)),
-                    child: Image.asset(
-                      'assets/icons/arrow.png',
-                      width: 20,
-                      color: canvasColor,
+                  trailing: GestureDetector(
+                    onTap: onTap,
+                    child: Container(
+                      width: sizeIcon,
+                      height: sizeIcon,
+                      padding: EdgeInsets.all(paddingIcon),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40),
+                          color: Color.fromARGB(255, 255, 255, 255)),
+                      child: Image.asset(
+                        'assets/icons/arrow.png',
+                        width: 20,
+                        color: canvasColor,
+                      ),
                     ),
                   )),
             ),

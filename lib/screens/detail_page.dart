@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'package:travelapp/constant.dart';
+import 'package:travelapp/screens/detail_travel.dart';
 
 import '../widgets/image_box.dart';
 
@@ -62,7 +63,7 @@ class DetailPage extends StatelessWidget {
                         ),
                       ),
                       child: Text(
-                        'Miền Bắc',
+                        'Northern',
                         style: TextStyle(fontSize: 16),
                       ),
                     ),
@@ -75,7 +76,7 @@ class DetailPage extends StatelessWidget {
                         ),
                       ),
                       child: Text(
-                        'Miền Trung',
+                        'Central',
                         style: TextStyle(fontSize: 16),
                       ),
                     ),
@@ -88,7 +89,7 @@ class DetailPage extends StatelessWidget {
                         ),
                       ),
                       child: Text(
-                        'Miền Nam',
+                        'Southern',
                         style: TextStyle(fontSize: 16),
                       ),
                     )
@@ -105,10 +106,19 @@ class DetailPage extends StatelessWidget {
                       sizeIcon: 50,
                       colorText: primaryColor,
                       urlImg:
-                          'https://vietnamdiscovery.com/wp-content/uploads/2020/12/Distance-from-Ninh-Binh-to-Hue-1.jpg',
+                          'https://www.vietnambooking.com/wp-content/uploads/2022/05/kinh-nghiem-du-lich-phu-quoc-cho-gia-dinh-1.jpg',
                       heightImg: 200,
                       marginImg: EdgeInsets.symmetric(vertical: 10),
-                      titleText: 'Hoa Lư',
+                      titleText: 'Phu Quoc',
+                      subtitleText: 'Kiên Giang, Việt Nam',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  DetailTravelScreen(titleText: 'Phú Quốc')),
+                        );
+                      },
                     ),
                     Container(
                       child: Row(
@@ -124,6 +134,7 @@ class DetailPage extends StatelessWidget {
                               heightImg: 180,
                               marginImg: EdgeInsets.only(right: 5),
                               titleText: 'Co Loa',
+                              subtitleText: 'Ha Noi',
                             ),
                           ),
                           Expanded(
@@ -137,6 +148,7 @@ class DetailPage extends StatelessWidget {
                               heightImg: 180,
                               marginImg: EdgeInsets.only(left: 5),
                               titleText: 'Co Loa',
+                              subtitleText: 'Ha Noi',
                             ),
                           ),
                         ],
@@ -152,6 +164,7 @@ class DetailPage extends StatelessWidget {
                       heightImg: 200,
                       marginImg: EdgeInsets.symmetric(vertical: 10),
                       titleText: 'Co Loa',
+                      subtitleText: 'Ha Noi',
                     ),
                     ImageBox(
                       priceText: '82',
@@ -163,6 +176,7 @@ class DetailPage extends StatelessWidget {
                       heightImg: 200,
                       marginImg: EdgeInsets.symmetric(vertical: 10),
                       titleText: 'Co Loa',
+                      subtitleText: 'Ha Noi',
                     ),
                   ]),
                 ),

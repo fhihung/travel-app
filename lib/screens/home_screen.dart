@@ -43,9 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: primaryColor,
         title: Text(
-          'Explore',
+          'EXPLORE',
           style: TextStyle(
-              color: canvasColor, fontSize: 35, fontWeight: FontWeight.w500),
+            color: canvasColor,
+            fontSize: 35,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       body: Container(
@@ -77,24 +80,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(children: [
                   BlurImageBox(
                     colorText: primaryColor,
-                    urlImg:
-                        'https://scontent.xx.fbcdn.net/v/t1.15752-9/363336104_1510445699494412_4997105854046924545_n.png?_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=yoth39pSl6EAX88H4R5&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSKYfEDG9aNdUruGEDTndedp1PeN8uJ8yzH_6ePiySgCQ&oe=64E96825',
+                    urlImg: 'assets/img/northern.png',
                     heightImg: 100,
                     marginImg: EdgeInsets.symmetric(vertical: 10),
                     text: 'Northern',
                   ),
                   BlurImageBox(
                     colorText: primaryColor,
-                    urlImg:
-                        'https://scontent.xx.fbcdn.net/v/t1.15752-9/363363671_1469351170489271_3877605168225930530_n.png?_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=m95S9k12QCsAX8QgoYy&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTi5sqhXa002hgpD4sMw4M3Z296Sr6P9Z42MkU2PeNU-w&oe=64E96184',
+                    urlImg: 'assets/img/central.png',
                     heightImg: 100,
                     marginImg: EdgeInsets.symmetric(vertical: 10),
                     text: 'Central',
                   ),
                   BlurImageBox(
                     colorText: primaryColor,
-                    urlImg:
-                        'https://scontent.xx.fbcdn.net/v/t1.15752-9/363413573_1341232080161859_5357853719975157195_n.png?_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_ohc=O-_OUjwT3YAAX83skxB&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRWUf7gOLfP9QB3iBj8gjCjtRW-GSbKTh0K5RFR_YbCfw&oe=64E94A22',
+                    urlImg: 'assets/img/southern.png',
                     heightImg: 100,
                     marginImg: EdgeInsets.symmetric(vertical: 10),
                     text: 'Southern',

@@ -36,7 +36,7 @@ class BlurImageBox extends StatelessWidget {
                 child: Stack(
                   fit: StackFit.expand,
                   children: [
-                    Image.network(urlImg, fit: BoxFit.cover),
+                    Image.asset(urlImg, fit: BoxFit.cover),
                     BackdropFilter(
                       filter: ImageFilter.blur(
                           sigmaX: 1.5,
